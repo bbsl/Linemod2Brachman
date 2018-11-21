@@ -50,7 +50,7 @@ int main()
 		//取出原图像素计算，seg图像对比
 		int cols = colorimg.cols;
 		int rows = colorimg.rows;
-		if (cols != colorimg.cols || rows != colorimg.rows){ cout << "different size" << endl; return -1; }
+		if (cols != segimg.cols || rows != segimg.rows){ cout << "different size" << endl; return -1; }
 		
 		//转换旋转矩阵和平移矩阵的坐标系
 		Matx31f tvec;
@@ -66,7 +66,6 @@ int main()
 		//相机坐标系转换到世界坐标系
 		//waitKey(0);
 		coord3_t pix;
-		//Matx31f pix_tmp;
 		for (int x = 0; x < camImg.rows; x++)
 		{
 			for (int y = 0; y < camImg.cols; y++)
@@ -74,10 +73,6 @@ int main()
 				if ((int)binimg.at<uchar>(x, y) == 255)
 				{
 					Matx31f pix_tmp(camImg(x, y)(0), camImg(x, y)(1), camImg(x, y)(2));
-					//pix_tmp = (pix(0), pix(1), pix(2));
-					//cout << "pix_tmp_camera:" << pix(0) << "\t" << pix(1) << "\t" << pix(2) << "\t" << endl;
-					//cout << "pix_tmp==" << pix_tmp << endl;
-					//cout << "rmat.inv()==" << rmat.inv() << endl;
 					pix_tmp = rmat * (pix_tmp - 1000 * tvec);
 					/*
 					if (pix_tmp.val[0] > 0)pix_tmp.val[0] = 0;

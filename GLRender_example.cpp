@@ -187,7 +187,7 @@ void GLRender::computeModelViewMatrix()
 	cout << trapath << endl;
 	cout << colorpath << endl;
 	cout << depthpath << endl;
-		//ÏÈÅÐ¶ÏÍ¼Æ¬ÊÇ·ñ¿ÉÓÃ
+		//å…ˆåˆ¤æ–­å›¾ç‰‡æ˜¯å¦å¯ç”¨
 		ifstream infile;
 		infile.open(trapath, ios::in);
 		if(!infile) cout << "open translation file error" << endl;
@@ -347,7 +347,7 @@ void GLRender::display()
 			cptrapath = cpdatapath +"tra\\"+ traname;
 			cpcolorpath = cpdatapath +"color\\"+ colorname;
 			cpdepthpath = cpdatapath + "depth\\" + depthname;
-			//¸´ÖÆÏà¹ØÊý¾Ý
+			//copy files
 			CopyFileA(rotpath.c_str(),cprotpath.c_str(),false);
 			CopyFileA(trapath.c_str(), cptrapath.c_str(), false);
 			CopyFileA(colorpath.c_str(), cpcolorpath.c_str(), false);

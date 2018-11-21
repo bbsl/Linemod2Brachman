@@ -36,7 +36,7 @@ static IplImage * loadDepth(string a_name)
 }
 static void getDepth(string path, img_depth_t &img)
 {
-	//∂¡…Ó∂»Õº∆¨
+	
 	IplImage* depImg = loadDepth(path);
 	Mat depth(depImg,true);
 	img = (img_depth_t &)depth;//[mm]

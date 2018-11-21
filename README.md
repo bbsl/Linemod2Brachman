@@ -5,5 +5,5 @@ step1:
   Render:https://github.com/imbinwang/LINE2D
   Change LINE2D/src/util/GLRender.cpp ,there is an example:"GLRender_example.cpp"
 
-step2:mine code
+step2:use mine code
   get segment file,obj file

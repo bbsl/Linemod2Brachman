@@ -3,7 +3,7 @@ convert the Linemod datasets type to Brachman' type  -- ‘’Uncertainty-Driven
 
 step1:
   Render:https://github.com/imbinwang/LINE2D
-  Change LINE2D/src/util/GLRender.cpp ,there is an example:"GLRender_example.cpp"
+  Adjust LINE2D/src/util/GLRender.cpp ,there is an example:"GLRender_example.cpp"
 
-step2:use mine code
-  get segment file,obj file
+step2:
+  Use mine code to get segment file,obj file

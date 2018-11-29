@@ -9,4 +9,4 @@ step1:
 
 step2:
 
-  Use mine code to get segment file,obj file
+  Use this code to get segment file,obj file
